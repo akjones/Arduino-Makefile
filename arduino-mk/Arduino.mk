@@ -542,7 +542,9 @@ ifndef ISP_EXT_FUSE
 endif
 
 # Everything gets built in here
-OBJDIR  	  = build-cli
+ifndef OBJDIR
+OBJDIR  	  = build-$(BOARD_TAG)
+endif
 
 ########################################################################
 # Local sources
